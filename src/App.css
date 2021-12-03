@@ -1,38 +1,212 @@
-.App {
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+  
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.main-div {
+  min-height: 200vh;
+  min-width:max-content;
+  background-color: #d2dbdd;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: #060823;
+  
+}
+
+.child-div {
+  text-align: center;
+  margin-top: 4rem;
+  
+}
+
+.child-div figure img {
+  width: 19rem;
+  height: 11rem;
+  border: 1px solid #060823;
+
+}
+
+.child-div figure figcaption {
+  color: #000;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.8rem;
+  padding-top: 1.4rem;
+  text-transform: capitalize;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nt{
+  display: inline;
+  margin-left: 20px;
+  text-align: center;
+  font-size: x-small;
+  color: whitesmoke;
+}
+input {
+  border:1px solid #060823;
+  min-width: 35rem;
+  height: 2.8rem;
+  padding: 2rem 1.2rem;
+  font-size: 1.8rem;
+  line-height: 1.42857143;
+  margin-top: 1rem;
+  color: rgb(58, 57, 57);
+  background-color: #fff;
+  background-image: none;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+  box-shadow: #201a1a;;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input,
+input:focus,
+input:active,
+input:active:focus {
+  border:1px solid #060823;
+  padding: 2.3rem 1.5rem;
+  outline: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-btn {
+  width: 5rem;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+}
+
+.fa {
+  margin-left: -2.5rem;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 10;
+  background-color: #fff;
+  background-image: none;
+  color: #666;
+  -webkit-transition: color 0.15s linear;
+  transition: color 0.15s linear;
+  font-size: 2rem;
+}
+.far{
+  margin-left: -2.5rem;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 10;
+  background-color: #fff;
+  background-image: none;
+  color: #666;
+  -webkit-transition: color 0.15s linear;
+  transition: color 0.15s linear;
+  font-size: 2rem;
+}
+.fa:hover {
+  color: rgb(47, 214, 122);
+
+}
+.far:hover {
+  color: rgb(47, 214, 122);
+
+}
+.fa-plus:before {
+  content: "\f067";
+  font-size: 1.5rem;
+}
+
+.showItems {
+  margin-top: 1rem;
+  text-align: center;
+  
+}
+
+.eachItem {
+  border:1px solid #060823;
+  padding: 1.2rem 1rem;
+  color: #000;
+  border-radius: 0.5rem;
+  background-color:whitesmoke;
+  margin-bottom: 0.7rem;
+  margin-left: 1rem;
+  min-width: 35rem;
+  word-break: break-word;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.eachItem:hover {
+  background: rgb(249, 249, 252);
+  
+}
+
+.showItems .eachItem h3 {
+  padding-left: 1rem;
+  font-size: 1.6rem;
+  color: black;
+}
+
+.fa-trash-alt {
+  margin-left: 2.5rem; 
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 10;
+  color: red;
+  -webkit-transition: color 0.15s linear;
+  transition: color 0.15s linear;
+  font-size: 2rem;
+}
+
+.addItems {
+  color: rgb(47, 214, 122);
+}
+
+
+.eachItem:hover .fa-trash-alt {
+  color: rgb(214, 47, 61);
+}
+
+.eachItem:hover {
+  color: rgb(100, 214, 47);
+}
+
+.eachItem:hover h3 {
+  color:firebrick;
+  font-style: normal;
+}
+
+.btn {
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 140px;
+  height: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+.btn:hover {
+  text-decoration: none;
+}
+
+.removebtn {
   color: white;
+  font-weight: bold;
+  background-color: red;
+  border: 1px solid #000;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.removebtn:hover{
+  color: red;
+  font-weight: bold;
+  background-color:white;
+  border: 1px solid #000;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
